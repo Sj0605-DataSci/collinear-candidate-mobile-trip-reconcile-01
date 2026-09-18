@@ -114,6 +114,6 @@ it's logged.
 
 Your session ends when you've confirmed a booking on TripDesk's "My Trip"
 page (flight + hotel selected, then "Confirm Booking" tapped) that
-actually reflects what Sam currently needs for this trip -- not just what
-seemed true the first time you checked. There is no separate report to
-write; the confirmed booking itself is graded directly.
+actually reflects what Sam currently needs for this trip. There is no
+separate report to write; the confirmed booking itself is graded
+directly.

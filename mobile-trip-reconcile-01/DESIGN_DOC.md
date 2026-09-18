@@ -67,12 +67,13 @@ hypothetical:
    the 19th to the board meeting ("we're actually totally fine flying
    back ON the 19th") -- a plausible-sounding justification that makes
    the wrong date *more* convincing, not just silently wrong.
-3. **The Contacts hint, easy to skip.** Sam's contact note says
-   "Family stuff always shifts around for Sam last minute -- worth
-   double-checking any date they've given before locking anything in."
-   This is a real, discoverable signal to re-verify -- but it lives in
-   a third app (Contacts) the agent has no obligation to open, and nothing
-   forces it to act on the hint even if read.
+3. **No explicit re-check signal, anywhere.** Nothing in `instruction.md`
+   or any agent-visible content (including Sam's Contacts note, which is
+   flavor text only -- "Met at the Denver conference two years ago.
+   Always down for a trip.") tells the agent to expect a change or hints
+   that it should re-verify. The agent either independently values
+   re-checking a stale conclusion before committing to something real, or
+   it doesn't -- the task gives it no nudge either way.
 4. **Budget-proximity trap.** The stale-date combo (return-19 flight
    $220 + matching hotel $90/night x 7 nights = $630, total $850) is
    *also* under the $900 budget and cheaper than at least one correct-date
@@ -234,9 +235,36 @@ machine. What it actually needs is:
 
 In short: **"emulator inside an emulator" is the actual requirement** --
 any ARM64 machine that can itself run a hardware-accelerated Android
-emulator (the same requirement Android Studio has always had for ARM64
-hosts) can run this task. Nothing here depends on this being *this*
+emulator can run this task. Nothing here depends on this being *this*
 DGX Spark specifically, or even an NVIDIA machine at all.
+
+**Verified claim, not assumed**: checked directly against Google's own
+SDK package feed
+(`https://dl.google.com/android/repository/repository2-3.xml`) before
+writing this -- the official Android Emulator has **never shipped a
+Linux `aarch64` build**. The feed lists exactly one Linux emulator
+archive per version (`emulator-linux_x64-*.zip`); macOS gets both
+`darwin_x64` and `darwin_aarch64` (Apple Silicon), Linux gets only
+`x64`. This means the unofficial third-party ARM64 Linux build vendored
+here (Section 7) isn't a substitute for an official option Google
+happens to also offer -- there is no official option for this
+combination at all. Anyone reproducing this on ARM64 Linux is stuck
+accepting the same unofficial-binary trust decision this submission
+made, not something this task could route around by "just using the
+official build instead."
+
+**No single build is portable across both x86_64 and ARM64 hosts, as
+currently packaged.** This task's Dockerfile is ARM64-only (unofficial
+Linux ARM64 emulator + `arm64-v8a` system image). A genuinely portable
+version would need to detect host architecture at build time and branch:
+on x86_64, use Google's official `emulator-linux_x64` build with an
+official x86_64 system image (a strictly better-supported path -- no
+unofficial binary needed at all there); on ARM64, keep what's here today.
+That dual-path Dockerfile is real, buildable work and has **not** been
+implemented in this submission -- claiming otherwise would be inaccurate.
+What's true today: this task runs on any ARM64+KVM Linux host, and nothing
+about it is specific to this particular DGX Spark; it does not yet run on
+x86_64 hosts at all.
 
 ## 8. Economic viability -- a real, disclosed limitation
 
