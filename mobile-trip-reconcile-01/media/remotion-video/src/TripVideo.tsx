@@ -86,7 +86,6 @@ export const TripVideo: React.FC = () => {
         startFrame += durationInFrames;
         return (
           <Sequence key={i} from={from} durationInFrames={durationInFrames}>
-            <Audio src={staticFile(scene.audioFile)} />
             {scene.kind === "title" ? (
               <TitleCard caption={scene.caption} />
             ) : (
