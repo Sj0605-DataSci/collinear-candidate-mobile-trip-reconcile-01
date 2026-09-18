@@ -104,6 +104,66 @@ Chat, then book -- replayed through the identical tool scripts
 This proves the task is solvable and that the recalibrated timing doesn't
 break a correct solution path.
 
+## How a human would actually do this
+
+Walking through it the way a person would, with real screenshots at each
+step (`media/screenshots/`, all real captures from a live build of this
+task -- not mockups; full storyboard with suggested captions and video-
+editing notes in `media/STORYBOARD.md`):
+
+1. **Look at the phone.** No app list, no "what's on screen" description --
+   just a home screen (`01-shared-home.png`). Calendar isn't on the dock,
+   so swipe up to the app drawer (`02-shared-app-drawer.png`) to find it.
+2. **Check Calendar first**, since that's usually the most reliable
+   source for "am I free on this date." Real agenda view
+   (`04-shared-calendar-agenda.png`): Dentist Oct 5, Board meeting Oct 19
+   5-6pm, Team standup Oct 20. The board meeting doesn't block flying
+   home *on* the 19th -- it's in the evening.
+3. **Check Contacts too**, since Sam is a real saved contact and might
+   have a note worth reading (`07-shared-sam-contact-card.png`).
+4. **Open Chrome, go to Chat with Sam** (`08-shared-chrome-open.png`,
+   `09-shared-chat-precorrection.png`). At this exact moment, the honest,
+   reasonable reading is: fly out the 12th, fly back the 19th (board
+   meeting doesn't conflict), keep the total under $900. **This is not a
+   trick reading** -- it's what a careful person would also conclude
+   right now, from real information.
+5. **A careful person still doesn't lock in a non-refundable booking
+   the instant they've read one message.** They'd give it some time --
+   check email again before confirming a big purchase, let a decision
+   sit overnight, whatever the real-world equivalent is. During that
+   gap, a real notification arrives (`10-shared-notification-icon-appears.png`,
+   `10b-shared-home-with-icon.png`) -- a small icon in the status bar,
+   easy to miss if not looking for it.
+6. **Noticing it (or just habitually re-checking Chat before booking
+   something real) is the actual test.** Pulling the shade down
+   (`11-shared-notification-shade.png`) shows "Sam: ..." -- worth
+   re-opening Chat for the full message: the return date actually needs
+   to be the 18th now, not the 19th.
+7. **Only now go pick a flight and hotel** (`12-shared-flights-list.png`),
+   this time filtering for the *corrected* return date (the 18th), not
+   the one first read.
+8. **Review together on My Trip, then confirm**
+   (`15-trajA-mytrip-correct-date.png` -> `16-trajA-confirmed-correct.png`).
+
+Total: roughly 40 real actions (taps, swipes, screenshots, a real ~9-minute
+wait for the correction to land), which is exactly what the oracle does --
+see `solution/oracle_steps.py` for the literal recorded script.
+
+## Where the real model diverged
+
+All 4 real `claude-fable-5.1-high` trials followed steps 1-4 identically
+to the human walkthrough above -- same apps, same reasonable first
+conclusion at step 4. The divergence happened at step 6: the model did
+check the notification shade at some point in its run, but treated
+"nothing new right now" as sufficient and went straight to booking off
+its original read, without returning to Chat again before confirming.
+The result (`13-trajB-mytrip-stale-date.png` -> `14-trajB-confirmed-WRONG.png`)
+looks nearly identical to the correct outcome on-screen -- same "Booked!"
+message, same internally-consistent flight+hotel pairing, still under
+budget -- the only difference is the date, and nothing in the app itself
+flags that difference. Catching it requires having gone back to Chat one
+more time, which none of the 4 trials did.
+
 ## Traces
 
 Full per-turn reasoning + tool-call traces for every trial listed above are
