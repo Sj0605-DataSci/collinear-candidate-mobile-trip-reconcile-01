@@ -1,0 +1,118 @@
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/swipe.py 540 2200 540 800 300
+Swiped (540,2200) -> (540,800). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 177 784
+Tapped (177, 784). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 1006 2192
+Tapped (1006, 2192). Take a screenshot to see the result.
+
+$ python3 /app/tap.py 539 2114
+Tapped (539, 2114). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/home.py
+Pressed home. Take a screenshot to see the home screen.
+
+$ python3 /app/swipe.py 540 2200 540 800 300
+Swiped (540,2200) -> (540,800). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 177 1097
+Tapped (177, 1097). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 659 2193
+Tapped (659, 2193). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 664 573
+Tapped (664, 573). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/home.py
+Pressed home. Take a screenshot to see the home screen.
+
+$ python3 /app/tap.py 666 1910
+Tapped (666, 1910). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ am start -d http://10.0.2.2:8080/chat
+Starting: Intent { act=android.intent.action.VIEW dat=http://10.0.2.2:8080/... }
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/wait.py 55
+Waited 55.0s.
+
+$ python3 /app/wait.py 55
+Waited 55.0s.
+
+$ python3 /app/wait.py 55
+Waited 55.0s.
+
+$ am start -d http://10.0.2.2:8080/chat
+Starting: Intent { act=android.intent.action.VIEW dat=http://10.0.2.2:8080/... }
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ am start -d http://10.0.2.2:8080/flights
+Starting: Intent { act=android.intent.action.VIEW dat=http://10.0.2.2:8080/... }
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 192 1650
+Tapped (192, 1650). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 297 688
+Tapped (297, 688). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 192 838
+Tapped (192, 838). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 273 688
+Tapped (273, 688). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+$ python3 /app/tap.py 263 1163
+Tapped (263, 1163). Take a screenshot to see the result.
+
+$ python3 /app/screenshot.py
+Screenshot saved to /app/output/screen.png -- read this image to see the current phone screen.
+
+oracle_steps complete

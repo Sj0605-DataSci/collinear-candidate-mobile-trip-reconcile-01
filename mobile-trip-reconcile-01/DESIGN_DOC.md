@@ -170,6 +170,14 @@ for the full results table and trace locations. The calibration fix
 worked exactly as intended: this is a real, reproducible, non-brittle
 failure, not a one-off.
 
+**Important scope caveat, stated plainly**: 480s is calibrated to
+`claude-fable-5.1-high`'s own observed pace, not chosen to be unbeatable
+in general. The evidence this produces is that `claude-fable-5.1-high`
+fails a re-verification requirement timed to its own natural latency --
+it is not evidence that this delay would defeat a materially faster or
+slower agent, and no claim to that effect is made here. See
+`REVIEWER_RESPONSE.md` point 1 for the full discussion.
+
 ## 7. Disclosed reproducibility caveats
 
 - **ARM64-only.** The emulator binary

@@ -14,11 +14,17 @@ Start here:
   (MobileWorld/AndroidWorld inspiration, net-new content), the 8 designed
   failure surfaces, a full fairness audit against the assignment rubric,
   disclosed reproducibility caveats, and economic-viability analysis.
-- [`RUN_REPORT.md`](RUN_REPORT.md) -- oracle result (2x independent
+- [`RUN_REPORT.md`](RUN_REPORT.md) -- oracle result (3x independent
   `overall: 1.0`), target-model result (`claude-fable-5.1-high`, 4/4 real
   trials at `overall: 0.65`, identical failure every time), the
   OpenRouter -> Claude Code/OAuth billing-route switch and why, full trace
   locations.
+- [`REVIEWER_RESPONSE.md`](REVIEWER_RESPONSE.md) -- direct response to
+  external review: what's fixed (raw traces now in `evidence/`), what's
+  disclosed and not fixed (ARM64/KVM reproducibility friction, no
+  completed GPT-model run), and where a claim's scope was narrowed
+  (the 480s trap is calibrated to this model's pace, not a
+  generalizable-to-any-agent delay).
 
 ## Task idea, in one paragraph
 

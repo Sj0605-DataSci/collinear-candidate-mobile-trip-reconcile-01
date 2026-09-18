@@ -1,0 +1,23 @@
+WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/codex-home"))
+Reading additional input from stdin...
+{"type":"thread.started","thread_id":"01a0b44d-9ead-7983-b998-d1568f4f7d9d"}
+{"type":"turn.started"}
+2026-09-18T11:36:21.424371Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 404 Not Found, url: wss://openrouter.ai/api/v1/responses
+2026-09-18T11:36:21.507235Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 404 Not Found, url: wss://openrouter.ai/api/v1/responses
+2026-09-18T11:36:21.737312Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 404 Not Found, url: wss://openrouter.ai/api/v1/responses
+{"type":"error","message":"Reconnecting... 2/5 (unexpected status 404 Not Found: 2c\r\n{\"error\":{\"message\":\"Not Found\",\"code\":404}}, url: wss://openrouter.ai/api/v1/responses, cf-ray: a3d00d6fbf4a5649-DEL)"}
+2026-09-18T11:36:22.190922Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 404 Not Found, url: wss://openrouter.ai/api/v1/responses
+{"type":"error","message":"Reconnecting... 3/5 (unexpected status 404 Not Found: 2c\r\n{\"error\":{\"message\":\"Not Found\",\"code\":404}}, url: wss://openrouter.ai/api/v1/responses, cf-ray: a3d00d729e0ae2c9-DEL)"}
+2026-09-18T11:36:23.085048Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 404 Not Found, url: wss://openrouter.ai/api/v1/responses
+{"type":"error","message":"Reconnecting... 4/5 (unexpected status 404 Not Found: 2c\r\n{\"error\":{\"message\":\"Not Found\",\"code\":404}}, url: wss://openrouter.ai/api/v1/responses, cf-ray: a3d00d7828954e88-DEL)"}
+2026-09-18T11:36:24.632592Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 404 Not Found, url: wss://openrouter.ai/api/v1/responses
+{"type":"error","message":"Reconnecting... 5/5 (unexpected status 404 Not Found: 2c\r\n{\"error\":{\"message\":\"Not Found\",\"code\":404}}, url: wss://openrouter.ai/api/v1/responses, cf-ray: a3d00d81dddb68e2-DEL)"}
+2026-09-18T11:36:28.090891Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 404 Not Found, url: wss://openrouter.ai/api/v1/responses
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Falling back from WebSockets to HTTPS transport. unexpected status 404 Not Found: 2c\r\n{\"error\":{\"message\":\"Not Found\",\"code\":404}}, url: wss://openrouter.ai/api/v1/responses, cf-ray: a3d00d977ccdf563-DEL"}}
+{"type":"error","message":"Reconnecting... 1/5 (unexpected status 402 Payment Required: Insufficient credits. Add more using https://openrouter.ai/settings/credits, url: https://openrouter.ai/api/v1/responses, cf-ray: a3d00d97b968df32-DEL)"}
+{"type":"error","message":"Reconnecting... 2/5 (unexpected status 402 Payment Required: Insufficient credits. Add more using https://openrouter.ai/settings/credits, url: https://openrouter.ai/api/v1/responses, cf-ray: a3d00d9b3b9ab7d1-DEL)"}
+{"type":"error","message":"Reconnecting... 3/5 (unexpected status 402 Payment Required: Insufficient credits. Add more using https://openrouter.ai/settings/credits, url: https://openrouter.ai/api/v1/responses, cf-ray: a3d00d9e1f175790-DEL)"}
+{"type":"error","message":"Reconnecting... 4/5 (unexpected status 402 Payment Required: Insufficient credits. Add more using https://openrouter.ai/settings/credits, url: https://openrouter.ai/api/v1/responses, cf-ray: a3d00da2fba5f563-DEL)"}
+{"type":"error","message":"Reconnecting... 5/5 (unexpected status 402 Payment Required: Insufficient credits. Add more using https://openrouter.ai/settings/credits, url: https://openrouter.ai/api/v1/responses, cf-ray: a3d00dae3de6101a-DEL)"}
+{"type":"error","message":"unexpected status 402 Payment Required: Insufficient credits. Add more using https://openrouter.ai/settings/credits, url: https://openrouter.ai/api/v1/responses, cf-ray: a3d00dc1b808b62a-DEL"}
+{"type":"turn.failed","error":{"message":"unexpected status 402 Payment Required: Insufficient credits. Add more using https://openrouter.ai/settings/credits, url: https://openrouter.ai/api/v1/responses, cf-ray: a3d00dc1b808b62a-DEL"}}
