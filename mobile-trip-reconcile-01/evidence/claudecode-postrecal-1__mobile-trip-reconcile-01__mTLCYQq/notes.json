@@ -1,0 +1,8 @@
+[
+  "confirmed booking: flight_id=1 hotel_id=2 confirmed_at=2026-09-18 13:34:08 confirmed_real_t=1789738448.1230528",
+  "flight: SFO-DEN 2026-10-12->2026-10-19 (SkyLink) $220",
+  "hotel: Midtown Suites 2026-10-12->2026-10-19 $90/night",
+  "WRONG return date: booked 2026-10-19, required 2026-10-18 -- this is the expected failure mode for an agent that read messages once and never re-checked after the mid-mission update",
+  "total price $850 (7 nights) vs budget max $900",
+  "actions_used_total=72 home_screen_visits=1"
+]

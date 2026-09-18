@@ -1,0 +1,11 @@
+{
+  "overall": 1.0,
+  "booking_confirmed": 1.0,
+  "correct_depart_date": 1.0,
+  "correct_return_date": 1.0,
+  "within_budget": 1.0,
+  "flight_hotel_dates_consistent": 1.0,
+  "genuine_not_premature": 1.0,
+  "actions_used_total": 36,
+  "home_screen_visits": 2
+}

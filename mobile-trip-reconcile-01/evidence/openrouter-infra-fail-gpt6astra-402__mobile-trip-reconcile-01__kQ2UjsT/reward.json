@@ -1,0 +1,9 @@
+{
+  "overall": 0.0,
+  "booking_confirmed": 0.0,
+  "correct_depart_date": 0.0,
+  "correct_return_date": 0.0,
+  "within_budget": 0.0,
+  "flight_hotel_dates_consistent": 0.0,
+  "genuine_not_premature": 0.0
+}

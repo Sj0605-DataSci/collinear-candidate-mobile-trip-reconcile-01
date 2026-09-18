@@ -1,0 +1,8 @@
+[
+  "confirmed booking: flight_id=2 hotel_id=1 confirmed_at=2026-09-18 11:30:45 confirmed_real_t=1789731045.8000953",
+  "flight: SFO-DEN 2026-10-12->2026-10-18 (SkyLink) $260",
+  "hotel: Budget Inn Denver 2026-10-12->2026-10-18 $70/night",
+  "total price $680 (6 nights) vs budget max $900",
+  "booking confirmed 211.4s after first action (new message arrives at 150s) -- genuinely evidenced",
+  "actions_used_total=36 home_screen_visits=2"
+]

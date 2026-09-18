@@ -1,0 +1,15 @@
+{
+    "task": {
+        "path": "."
+    },
+    "trial_name": "mobile-trip-reconcile-01__cXbJrY9",
+    "trials_dir": "jobs/2026-09-18__19-09-59",
+    "agent": {
+        "name": "claude-code",
+        "model_name": "claude-fable-5-1",
+        "kwargs": {
+            "reasoning_effort": "high"
+        }
+    },
+    "job_id": "f63f17d7-f32f-4540-b318-71e43022a5e2"
+}

@@ -1,0 +1,15 @@
+{
+    "task": {
+        "path": "."
+    },
+    "trial_name": "mobile-trip-reconcile-01__kQ2UjsT",
+    "trials_dir": "jobs/2026-09-18__17-06-12",
+    "agent": {
+        "name": "codex",
+        "model_name": "openai/gpt-6-astra",
+        "kwargs": {
+            "reasoning_effort": "high"
+        }
+    },
+    "job_id": "65fc6516-30c9-4a99-8ab4-faf69fe45a5a"
+}

@@ -1,0 +1,56 @@
+schema_version = "1.4"
+
+[task]
+name = "collinear-candidate/mobile-trip-reconcile-01"
+description = "Real Android device (ARM64 emulator, KVM-accelerated), raw tap/swipe/type/screenshot action space, no accessibility tree or semantic app list. The agent must plan connecting travel (flight + hotel) by cross-referencing a real Calendar app and a Chat thread with a Chrome-hosted booking site (TripDesk), navigating between apps via the real home screen the way a human would -- there is no 'open app by name' shortcut. A genuine mid-mission event (a new incoming chat message, delivered as a real Android system notification some real minutes after the agent starts) overturns the return-date conclusion that the information available at t=0 reasonably supports, testing whether the agent's final booking reflects genuinely re-checked, current information or a stale first pass."
+version = "1.0.0"
+authors = [{ name = "Sanyam", email = "sanyam0605@gmail.com" }]
+keywords = ["mobile-agent", "android", "long-horizon", "cross-app", "state-tracking", "visual-grounding", "tool-use"]
+
+[metadata]
+author_name = "Sanyam"
+author_email = "sanyam0605@gmail.com"
+difficulty = "hard"
+category = "mobile-agent"
+tags = ["android", "mobile-gui", "cross-app", "long-horizon", "visual-grounding", "state-tracking", "tool-use"]
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+# Generous ceiling, not the binding constraint (per OSWorld 2.0 / Long-
+# Horizon-Terminal-Bench methodology, and per this project's own established
+# discipline): the scripted new-message event alone needs 150s of real
+# elapsed time after the agent's first action, plus real round-trip latency
+# on every tap/screenshot adb call, plus dozens of actions for a genuine
+# human-style multi-app navigation. See RUN_REPORT.md for the oracle's real
+# measured action count and wall-clock time.
+timeout_sec = 3600.0
+network_mode = "allowlist"
+allowed_hosts = ["openrouter.ai", "downloads.claude.ai", "api.anthropic.com", "claude.ai", "console.anthropic.com", "statsig.anthropic.com"]
+
+[environment]
+# emulator + system image + platform-tools + amd64 libc download -- real
+# network is required to BUILD the image (not at agent runtime). At agent
+# runtime the emulator's Chrome only talks to the local TripDesk server
+# (10.0.2.2, the QEMU NAT alias for the container's own loopback) -- no
+# real internet needed for the mission itself. The allowlist below exists
+# only because an installed-CLI agent (e.g. claude-code) installs and
+# authenticates itself INSIDE this same environment container at agent
+# runtime, not in a separate sidecar -- [agent].network_mode/allowed_hosts
+# alone does not cover that traffic.
+build_timeout_sec = 2400.0
+cpus = 4
+memory_mb = 4096
+storage_mb = 12288
+gpus = 0
+network_mode = "allowlist"
+allowed_hosts = ["openrouter.ai", "downloads.claude.ai", "api.anthropic.com", "claude.ai", "console.anthropic.com", "statsig.anthropic.com"]
+mcp_servers = []
+workdir = "/app"
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]

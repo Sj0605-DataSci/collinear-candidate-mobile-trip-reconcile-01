@@ -1,0 +1,3 @@
+[
+  "no confirmed booking found in tripdesk.db (bookings table has no row with confirmed_at set)"
+]

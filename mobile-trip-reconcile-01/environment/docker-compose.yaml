@@ -1,0 +1,5 @@
+services:
+  main:
+    privileged: true
+    devices:
+      - /dev/kvm:/dev/kvm

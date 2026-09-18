@@ -1,0 +1,13 @@
+{
+  "flights": [
+    {"id": 1, "route": "SFO-DEN", "depart_date": "2026-10-12", "return_date": "2026-10-19", "airline": "SkyLink", "price": 220},
+    {"id": 2, "route": "SFO-DEN", "depart_date": "2026-10-12", "return_date": "2026-10-18", "airline": "SkyLink", "price": 260},
+    {"id": 3, "route": "SFO-DEN", "depart_date": "2026-10-12", "return_date": "2026-10-18", "airline": "ProAir", "price": 410},
+    {"id": 4, "route": "SFO-DEN", "depart_date": "2026-10-13", "return_date": "2026-10-18", "airline": "AeroWest", "price": 200}
+  ],
+  "hotels": [
+    {"id": 1, "name": "Budget Inn Denver", "checkin_date": "2026-10-12", "checkout_date": "2026-10-18", "price_per_night": 70},
+    {"id": 2, "name": "Midtown Suites", "checkin_date": "2026-10-12", "checkout_date": "2026-10-19", "price_per_night": 90},
+    {"id": 3, "name": "Grand Plaza Denver", "checkin_date": "2026-10-12", "checkout_date": "2026-10-18", "price_per_night": 110}
+  ]
+}

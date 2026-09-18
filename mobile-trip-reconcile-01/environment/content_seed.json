@@ -1,0 +1,23 @@
+{
+  "calendar_events": [
+    {"title": "Dentist", "date": "2026-10-05", "time": "10:00"},
+    {"title": "Board meeting", "date": "2026-10-19", "time": "17:00"},
+    {"title": "Team standup", "date": "2026-10-20", "time": "09:30"}
+  ],
+  "sms_thread_existing": [
+    {"from": "Sam", "text": "Hey! Looking at Denver for the trip, does Oct 12 work to fly out?"},
+    {"from": "me", "text": "Yeah Oct 12 works for me"},
+    {"from": "Sam", "text": "Cool. Let's keep the combined flight+hotel under $900 total, tight month"},
+    {"from": "Sam", "text": "I've got that board meeting on the 19th but it's not till 5pm, so we're actually totally fine flying back ON the 19th, no need to rush the 18th"},
+    {"from": "Sam", "text": "lol unrelated but did you see the game last night"}
+  ],
+  "sms_new_arrival": {
+    "delay_seconds": 480,
+    "from": "Sam",
+    "text": "ugh scratch that -- my sister just moved mom's dinner to the 19th morning instead of the board meeting day being clear, so we actually DO need to be back by the 18th now, not the 19th. sorry, forgot the dinner was even a thing!"
+  },
+  "contact": {
+    "name": "Sam",
+    "note": "Family stuff always shifts around for Sam last minute -- worth double-checking any date they've given before locking anything in."
+  }
+}
