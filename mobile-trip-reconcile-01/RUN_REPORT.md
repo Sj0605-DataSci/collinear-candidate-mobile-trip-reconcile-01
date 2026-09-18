@@ -107,12 +107,22 @@ break a correct solution path.
 ## Traces
 
 Full per-turn reasoning + tool-call traces for every trial listed above are
-preserved under `jobs/<job-id>/mobile-trip-reconcile-01__<trial-id>/agent/`
-(`claude-code.txt` for OAuth trials, `codex.txt` for OpenRouter trials) --
-raw `stream-json`, one event per line, including thinking blocks, every
-tool call and its result, in chronological order. `verifier/reward.json`
-and `verifier/notes.json` in each trial directory hold the graded outcome
-and the human-readable breakdown quoted in the table above.
+committed to this repo under `evidence/<label>__mobile-trip-reconcile-01__<trial-id>/`
+(`claude-code.txt` for OAuth trials, `codex.txt` for OpenRouter trials,
+`oracle.txt` for oracle runs) -- raw `stream-json`, one event per line,
+including thinking blocks, every tool call and its result, in
+chronological order. `reward.json` and `notes.json` in each trial
+directory hold the graded outcome and the human-readable breakdown quoted
+in the table above. (`jobs/` itself, the full local run directory these
+were extracted from, is gitignored and not part of this repo -- it
+contains bulk re-derivable data like full ATIF trajectory.json
+conversions; `evidence/` is the curated, pushed subset.)
+
+Direct paths for the 4 real target-model failures:
+- `evidence/claudecode-postrecal-1__mobile-trip-reconcile-01__mTLCYQq/claude-code.txt`
+- `evidence/claudecode-postrecal-2to4__mobile-trip-reconcile-01__cQmv2vU/claude-code.txt`
+- `evidence/claudecode-postrecal-2to4__mobile-trip-reconcile-01__cXbJrY9/claude-code.txt`
+- `evidence/claudecode-postrecal-2to4__mobile-trip-reconcile-01__rpRsTRz/claude-code.txt`
 
 ## Design and fairness documentation
 
